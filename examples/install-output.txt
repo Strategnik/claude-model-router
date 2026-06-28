@@ -1,0 +1,17 @@
+$ ./install.sh
+
+overkill installer
+
+Copies:
+  agents/quick.md       -> ~/.claude/agents/quick.md
+  agents/deep-work.md   -> ~/.claude/agents/deep-work.md
+  settings.json         -> ~/.claude/settings.json when no model is configured
+  CLAUDE.routing.md     -> ~/.claude/CLAUDE.md between marker comments
+
+Safety behavior:
+  - honors CLAUDE_CONFIG_DIR
+  - creates backups before editing CLAUDE.md
+  - marker-guards the routing block so repeated installs are idempotent
+  - does not require a proxy or background service
+
+Run `bash -n install.sh` to validate the installer without touching your Claude config.

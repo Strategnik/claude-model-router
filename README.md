@@ -1,5 +1,10 @@
 # overkill
 
+[![CI](https://github.com/Strategnik/overkill/actions/workflows/ci.yml/badge.svg)](https://github.com/Strategnik/overkill/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Claude Code](https://img.shields.io/badge/Claude_Code-router-1de2c4.svg)](https://claude.com/claude-code)
+[![No proxy](https://img.shields.io/badge/proxy-none-black.svg)](#the-idea)
+
 <p align="center">
   <img src="assets/social-preview.png" alt="overkill — stop paying Opus to fix your typos" width="100%">
 </p>
@@ -13,6 +18,8 @@ the problem, not a flat top-tier rate.
 
 Set once in `~/.claude/`, inherited by every project, overridable per repo. No proxy, no
 extra service — just config.
+
+Developer proof: [architecture notes](docs/architecture.md), [installer behavior](examples/install-output.txt), and CI validation for the installer/config files.
 
 ---
 

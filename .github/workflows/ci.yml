@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash -n install.sh
+      - run: test -f agents/quick.md
+      - run: test -f agents/deep-work.md
+      - run: test -f CLAUDE.routing.md
+      - run: python3 -m py_compile sdk/escalating_agent.py
